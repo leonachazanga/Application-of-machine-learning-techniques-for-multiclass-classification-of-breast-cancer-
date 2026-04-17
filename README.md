@@ -1,0 +1,2 @@
+# Application-of-machine-learning-techniques-for-multiclass-classification-of-breast-cancer-
+A deep learning project focused on multiclass classification of breast cancer histopathology images using the BreakHis dataset. This project applies transfer learning with ResNet-50, DenseNet121, and EfficientNet-B0, along with preprocessing, class balancing, and Grad-CAM to improve classification performance and interpretability.
