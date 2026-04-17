@@ -1,22 +1,31 @@
 # Application-of-machine-learning-techniques-for-multiclass-classification-of-breast-cancer-
 A deep learning project focused on multiclass classification of breast cancer histopathology images using the BreakHis dataset. This project applies transfer learning with ResNet-50, DenseNet121, and EfficientNet-B0, along with preprocessing, class balancing, and Grad-CAM to improve classification performance and interpretability.
+
+
+#Introduction
 Breast cancer is the most diagnosed cancer and leading cause of cancer death among women worldwide. It is comprised of a heterogeneous group of tumors with variations in clinical presentation, morphology, biological behavior, molecular features and response to therapy (Rakha, 2022). The breast cancer incidence and death rates have continuously increased over the past three decades with about 2.3 million new cases worldwide according to GLOBOCAN 2020 data (Łukasiewic et al 2021). 
 The pathological and morphological classification of breast cancer is important as it provides diagnostic and prognostic information. Histomorphological classification plays a pivotal role in breast cancer diagnosis as it provided the foundation for all the other classification systems (Rakha et al, 2022). 
 Artificial intelligence (AI), machine learning (ML) and deep learning (DL) help improve the ability of histopathologists to make more accurate and reproducible diagnoses (Dur Karasayar et al, 2025). AI-powered image analysis contributes to more precise staging, treatment planning, and reduced evaluation time. 
-Problem Statement
+
+
+#Problem Statement
 Breast cancer is characterized by the presence of multiple subtypes of tumors which may be difficult to distinguish due to the presence of high intra-class variability and inter-class similarity in histopathological images which may be difficult for pathologists to identify. Therefore, there is a need to develop AI based systems which can efficiently and accurately classify breast cancer tumor types and improve diagnostic accuracy and reduce time taken to process histopathology images. 
-Objectives
+#Objectives
 To develop a machine learning model for multiclass classification of breast cancer subtypes using breast histopathology images
 To evaluate the model performance
 To use Gradient-weighted Class Activation Mapping (Grad-CAM) to visualize image sections influencing model classification decisions 
-Dataset
+
+
+#Dataset
 BreakHis Dataset containing a total of 7909 breast histopathology images was used. The dataset comprises of 2 categories, Benign and Malignant images. 
 Benign (2480 images)-Adenosis (A), Fibroadenoma (F), Phyllodes Tumor (PT), Tubular Adenoma (TA)
 Malignant (5429 images)- Ductal Carcinoma (DC), Lobular Carcinoma (LC), Mucinous Carcinoma (MC), Papillary Carcinoma (PC)
 The 100X magnification dataset with 2081 was used for this project because it provides enough morphological detail while maintaining computational efficiency. 
 Dataset link:
 http://www.inf.ufpr.br/vri/databases/BreaKHis_v1.tar.gz
-Dataset Features and Relevance
+
+
+#Dataset Features and Relevance
 High-resolution histopathology images capturing cellular structures
 Eight tumor classes for multiclass classification
 Standardized microscopy settings
@@ -27,7 +36,7 @@ Dataset labeled by pathologists with confirmed diagnoses
 Introduced in a peer-reviewed scientific publication
 Represents real clinical conditions
 Preprocessing steps applied to ensure data quality
-Data Preprocessing and Transformations
+#Data Preprocessing and Transformations
 The following preprocessing steps were applied:
 Images were checked for correct formats
 Converted to RGB format
@@ -39,11 +48,11 @@ Stratified sampling- to ensure proportional representation across classes.
 Class balance- WeightedRandomSampler used as dataset is imbalanced (approx. 70% malignant).
 Models used- ResNet-50, DenseNet121, EfficientNet-B0
 All models use- Transfer Learning (ImageNet pretrained weights), modified final layer for 8-class classification
-Model Descriptions
+#Model Descriptions
 ResNet-50- uses residual connections to reduce vanishing gradients
 DenseNet121- Dense connections improve feature reuse
 EfficientNet-B0- Balanced scaling of depth, width, and resolution
-Model Selection
+#Model Selection
 Models were evaluated using accuracy, precision, recall, F1-score, ROC-AUC, Loss
 Fine-Tuning Strategy
 Increased image size to 224 × 224
@@ -53,7 +62,7 @@ Learning rate: 1e-4
 Early stopping- patience = 5
 Backbone partially unfrozen
 Improved learning efficiency and model accuracy 
-Model Evaluation and Interpretability
+#Model Evaluation and Interpretability
 Confusion Matrix- shows strong classification performance with minor confusion between similar tumor types 
 ROC Curves- high AUC values indicate strong class separability 
 Learning Curves- showed stable training and reduced loss over epochs 
