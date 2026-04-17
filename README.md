@@ -13,7 +13,7 @@ Breast cancer is characterized by the presence of multiple subtypes of tumors wh
 # Objectives
 * To develop a machine learning model for multiclass classification of breast cancer subtypes using breast histopathology images
 * To evaluate the model performance
-*To use Gradient-weighted Class Activation Mapping (Grad-CAM) to visualize image sections influencing model classification decisions 
+* To use Gradient-weighted Class Activation Mapping (Grad-CAM) to visualize image sections influencing model classification decisions 
 
 # Dataset
 BreakHis Dataset containing a total of 7909 breast histopathology images was used. The dataset comprises of 2 categories, Benign and Malignant images. 
