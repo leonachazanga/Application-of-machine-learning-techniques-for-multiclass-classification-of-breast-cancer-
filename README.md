@@ -25,33 +25,33 @@ http://www.inf.ufpr.br/vri/databases/BreaKHis_v1.tar.gz
 
 
 # Dataset Features and Relevance
-High-resolution histopathology images capturing cellular structures
-Eight tumor classes for multiclass classification
-Standardized microscopy settings
-Real clinical images from 84 patients with confirmed diagnoses
-These characteristics allow the dataset to be used in AI models which can assist in clinical diagnosis. 
-Dataset Validation and Data Quality
-Dataset labeled by pathologists with confirmed diagnoses
-Introduced in a peer-reviewed scientific publication
-Represents real clinical conditions
-Preprocessing steps applied to ensure data quality
-#Data Preprocessing and Transformations
+* High-resolution histopathology images capturing cellular structures
+* Eight tumor classes for multiclass classification
+* Standardized microscopy settings
+* Real clinical images from 84 patients with confirmed diagnoses
+* These characteristics allow the dataset to be used in AI models which can assist in clinical diagnosis. 
+* Dataset Validation and Data Quality
+* Dataset labeled by pathologists with confirmed diagnoses
+* Introduced in a peer-reviewed scientific publication
+* Represents real clinical conditions
+
+# Data Preprocessing and Transformations
 The following preprocessing steps were applied:
-Images were checked for correct formats
-Converted to RGB format
-Standardized image dimensions
-Image resizing: 240 × 240
-Normalization- Mean(0.485, 0.456, 0.406), Std (0.229, 0.224, 0.225)
-Data Splitting- Training set (70%), Validation set (15%), Test set (15%)
-Stratified sampling- to ensure proportional representation across classes. 
-Class balance- WeightedRandomSampler used as dataset is imbalanced (approx. 70% malignant).
-Models used- ResNet-50, DenseNet121, EfficientNet-B0
+* Images were checked for correct formats
+* Converted to RGB format
+* Standardized image dimensions
+* Image resizing: 240 × 240
+* Normalization- Mean(0.485, 0.456, 0.406), Std (0.229, 0.224, 0.225)
+* Data Splitting- Training set (70%), Validation set (15%), Test set (15%)
+* Stratified sampling- to ensure proportional representation across classes. 
+* Class balance- WeightedRandomSampler used as dataset is imbalanced (approx. 70% malignant).
+* Models used- ResNet-50, DenseNet121, EfficientNet-B0
 All models use- Transfer Learning (ImageNet pretrained weights), modified final layer for 8-class classification
 
 # Model Descriptions
-ResNet-50- uses residual connections to reduce vanishing gradients
-DenseNet121- Dense connections improve feature reuse
-EfficientNet-B0- Balanced scaling of depth, width, and resolution
+* ResNet-50- uses residual connections to reduce vanishing gradients
+* DenseNet121- Dense connections improve feature reuse
+* EfficientNet-B0- Balanced scaling of depth, width, and resolution
 # Model Selection
 * Models were evaluated using accuracy, precision, recall, F1-score, ROC-AUC, Loss
 * Fine-Tuning Strategy
