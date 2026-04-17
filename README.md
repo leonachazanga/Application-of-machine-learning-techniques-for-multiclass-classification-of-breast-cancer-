@@ -78,7 +78,7 @@ During validation, ResNet-50 achieved the highest accuracy (0.7051) and F1-score
 All three models demonstrated strong performance, with accuracies ranging from approximately 89% to 91% and very high AUC values of approx. 0.99, indicating excellent ability to distinguish between breast cancer subtypes. DenseNet121 provided the most balanced performance, achieving the highest F1-score (0.8999) and precision (0.9081), which suggests it is the most reliable model across all classes with fewer false positives. ResNet-50 achieved the highest overall accuracy (0.9073), recall (0.9052), and AUC (0.9949), indicating it performs best in correctly identifying true cases and has the strongest class separability. EfficientNet-B0 shows slightly lower performance across all metrics, with reduced precision (0.8813) and F1-score (0.8845). Overall, DenseNet121 is the best choice for balanced performance, while ResNet-50 offers the highest predictive power, and EfficientNet-B0 performs slightly less effectively compared to the other models. For clinical purposes, ResNet50 would be the best model as it performed best in correctly identifying true cases
 
 # Limitations
-Class imbalance
+* Class imbalance
 Few epochs due to hardware limitations
 Limited dataset size
 Partial fine-tuning
