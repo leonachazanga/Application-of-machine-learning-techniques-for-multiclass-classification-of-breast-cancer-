@@ -16,7 +16,7 @@ Breast cancer is characterized by the presence of multiple subtypes of tumors wh
 * To use Gradient-weighted Class Activation Mapping (Grad-CAM) to visualize image sections influencing model classification decisions 
 
 # Dataset
-BreakHis Dataset containing a total of 7909 breast histopathology images was used. The dataset comprises of 2 categories, Benign and Malignant images. 
+BreakHis Dataset containing a total of 9109 breast histopathology images was used. The dataset comprises of 2 categories, Benign and Malignant images. 
 Benign (2480 images)-Adenosis (A), Fibroadenoma (F), Phyllodes Tumor (PT), Tubular Adenoma (TA)
 Malignant (5429 images)- Ductal Carcinoma (DC), Lobular Carcinoma (LC), Mucinous Carcinoma (MC), Papillary Carcinoma (PC)
 The 100X magnification dataset with 2081 was used for this project because it provides enough morphological detail while maintaining computational efficiency. 
