@@ -10,10 +10,10 @@ Artificial intelligence (AI), machine learning (ML) and deep learning (DL) help 
 
 # Problem Statement
 Breast cancer is characterized by the presence of multiple subtypes of tumors which may be difficult to distinguish due to the presence of high intra-class variability and inter-class similarity in histopathological images which may be difficult for pathologists to identify. Therefore, there is a need to develop AI based systems which can efficiently and accurately classify breast cancer tumor types and improve diagnostic accuracy and reduce time taken to process histopathology images. 
-#Objectives
-To develop a machine learning model for multiclass classification of breast cancer subtypes using breast histopathology images
-To evaluate the model performance
-To use Gradient-weighted Class Activation Mapping (Grad-CAM) to visualize image sections influencing model classification decisions 
+# Objectives
+* To develop a machine learning model for multiclass classification of breast cancer subtypes using breast histopathology images
+* To evaluate the model performance
+*To use Gradient-weighted Class Activation Mapping (Grad-CAM) to visualize image sections influencing model classification decisions 
 
 # Dataset
 BreakHis Dataset containing a total of 7909 breast histopathology images was used. The dataset comprises of 2 categories, Benign and Malignant images. 
@@ -53,24 +53,24 @@ ResNet-50- uses residual connections to reduce vanishing gradients
 DenseNet121- Dense connections improve feature reuse
 EfficientNet-B0- Balanced scaling of depth, width, and resolution
 # Model Selection
-Models were evaluated using accuracy, precision, recall, F1-score, ROC-AUC, Loss
-Fine-Tuning Strategy
-Increased image size to 224 × 224
-Batch size: 16
-Epochs- increased from 10 to 20
-Learning rate: 1e-4
-Early stopping- patience = 5
-Backbone partially unfrozen
+* Models were evaluated using accuracy, precision, recall, F1-score, ROC-AUC, Loss
+* Fine-Tuning Strategy
+* Increased image size to 224 × 224
+* Batch size: 16
+* Epochs- increased from 10 to 20
+* Learning rate: 1e-4
+* Early stopping- patience = 5
+* Backbone partially unfrozen
 Improved learning efficiency and model accuracy 
 
 # Model Evaluation and Interpretability
-Confusion Matrix- shows strong classification performance with minor confusion between similar tumor types 
-ROC Curves- high AUC values indicate strong class separability 
-Learning Curves- showed stable training and reduced loss over epochs 
-Grad-CAM was used to highlight important regions in histopathology images showing tumor-relevant areas to ensure the model is learning meaningful features
+* Confusion Matrix- shows strong classification performance with minor confusion between similar tumor types 
+* ROC Curves- high AUC values indicate strong class separability 
+* Learning Curves- showed stable training and reduced loss over epochs 
+* Grad-CAM was used to highlight important regions in histopathology images showing tumor-relevant areas to ensure the model is learning meaningful features
 
 # Results #
-Baseline model (Code part 1)
+# Baseline model (Code part 1)
 In the Code Part 1, the baseline model was developed using a transfer learning approach with pretrained convolutional neural networks. The aim was to establish an initial performance benchmark before applying fine-tuning and advanced optimization techniques. Pretrained architectures (ResNet-50, DenseNet121, and EfficientNet-B0) were initialized with ImageNet weights. The final classification layer of each model was replaced with a new fully connected layer consisting of 8 output neurons, corresponding to the eight breast cancer subtypes. The pretrained layers were kept frozen with only the final classification layer was trained. This allowed the model to retain previously learned general image features while adapting to the multiclassification task. The baseline results showed moderate performance, with accuracy values ranging between 63%–67% and F1-scores of about 64%. This indicated that while the models were learning meaningful patterns, their performance was limited due to restricted training (frozen layers) and lack of fine-tuning. The baseline model served as a reference point, highlighting the need for further optimization through fine-tuning, improved preprocessing, and enhanced training strategies, which were implemented in the “Part 2 code” stage of the project.
 # Tuned model (Code Part 2)
 During validation, ResNet-50 achieved the highest accuracy (0.7051) and F1-score (0.6651), indicating the best overall performance among the three models. DenseNet121 showed moderate performance (accuracy 0.6795, F1-score 0.6419), performing slightly lower than ResNet-50 but still reasonably strong. EfficientNet-B0 had the lowest performance (accuracy 0.6410, F1-score 0.6057), suggesting it was less effective for this classification of the breast cancer images. 
@@ -79,23 +79,23 @@ All three models demonstrated strong performance, with accuracies ranging from a
 
 # Limitations
 * Class imbalance
-Few epochs due to hardware limitations
-Limited dataset size
-Partial fine-tuning
+* Few epochs due to hardware limitations
+* Limited dataset size
+* Partial fine-tuning
 
 # Conclusion #
-Successfully developed a multiclass breast cancer classification model
-Achieved approximately 90% accuracy with strong F1-scores after fine-tuning
-DenseNet121 performed best overall, ResNet-50 achieved highest accuracy/AUC
-Grad-CAM confirmed model focuses on relevant tumor regions
-Demonstrates strong potential of AI for cancer histopathology image processing 
+* Successfully developed a multiclass breast cancer classification model
+* Achieved approximately 90% accuracy with strong F1-scores after fine-tuning
+* DenseNet121 performed best overall, ResNet-50 achieved highest accuracy/AUC
+* Grad-CAM confirmed model focuses on relevant tumor regions
+* Demonstrates strong potential of AI for cancer histopathology image processing 
 
 # Future Work
-Increase number of epochs to improve generalization
-Expand dataset
-Apply advanced augmentation techniques
-Deploy model for clinical use
-Technologies Used
-Python (PyTorch, NumPy, Pandas, Matplotlib, scikit-learn)
+* Increase number of epochs to improve generalization
+* Expand dataset
+* Apply advanced augmentation techniques
+* Deploy model for clinical use
+* Technologies Used
+* Python (PyTorch, NumPy, Pandas, Matplotlib, scikit-learn)
 
 
